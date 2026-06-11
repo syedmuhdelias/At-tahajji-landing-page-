@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#edf8f3"/>
+  <rect x="60" y="80" width="480" height="260" rx="20" fill="#fff" fill-opacity="0.85" stroke="#d9a441" stroke-opacity="0.3"/>
+  <circle cx="180" cy="190" r="36" fill="#126756" fill-opacity="0.3"/>
+  <circle cx="300" cy="190" r="36" fill="#126756" fill-opacity="0.3"/>
+  <circle cx="420" cy="190" r="36" fill="#126756" fill-opacity="0.3"/>
+  <rect x="120" y="260" width="360" height="40" rx="10" fill="#0c3b33" fill-opacity="0.08"/>
+  <text x="300" y="400" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#687772">Small Group Learning</text>
+</svg>

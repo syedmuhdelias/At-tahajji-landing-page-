@@ -1,0 +1,19 @@
+{
+  "name": "attahajji-promotional-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Promotional website for Kaedah At-Tahajji Quran and Arabic class",
+  "scripts": {
+    "dev": "serve .",
+    "start": "serve .",
+    "build": "echo Static website - no build step required",
+    "preview": "serve .",
+    "clean": "echo No build folder to clean"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

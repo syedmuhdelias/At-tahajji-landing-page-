@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#e7f4ef"/>
+  <circle cx="300" cy="200" r="80" fill="#126756" fill-opacity="0.15"/>
+  <path d="M260 200c0-22 18-40 40-40s40 18 40 40" stroke="#0c3b33" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="300" cy="230" rx="50" ry="30" fill="#0c3b33" fill-opacity="0.2"/>
+  <path d="M240 280 Q300 320 360 280" stroke="#126756" stroke-width="4" fill="none" stroke-opacity="0.4"/>
+  <text x="300" y="400" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#687772">Makhraj Practice</text>
+</svg>

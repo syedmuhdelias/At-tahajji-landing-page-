@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#fff8ea"/>
+  <rect x="140" y="80" width="160" height="220" rx="8" fill="#0c3b33"/>
+  <rect x="300" y="100" width="160" height="200" rx="8" fill="#126756"/>
+  <rect x="155" y="95" width="130" height="205" rx="4" fill="#fff8ea" fill-opacity="0.9"/>
+  <rect x="315" y="115" width="130" height="185" rx="4" fill="#fff8ea" fill-opacity="0.9"/>
+  <text x="300" y="400" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#687772">Learning Materials</text>
+</svg>
