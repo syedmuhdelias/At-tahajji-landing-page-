@@ -169,6 +169,72 @@ a {
   gap: 56px;
 }
 
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content > * {
+  opacity: 0;
+  animation: heroFadeIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-content > *:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.hero-content > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.hero-content > *:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+.hero-content > *:nth-child(4) {
+  animation-delay: 0.44s;
+}
+
+.hero-content > *:nth-child(5) {
+  animation-delay: 0.56s;
+}
+
+.hero-photo,
+.hero-card-compact {
+  opacity: 0;
+  animation: heroFadeIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-photo {
+  animation-delay: 0.25s;
+}
+
+.hero-card-compact {
+  animation-delay: 0.45s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content > *,
+  .hero-photo,
+  .hero-card-compact {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .price-card.reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .eyebrow,
 .section-kicker {
   display: inline-flex;
@@ -666,13 +732,47 @@ a {
   border-radius: var(--radius-lg);
   padding: 30px;
   box-shadow: 0 16px 44px rgba(8, 44, 38, 0.08);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.price-card.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+}
+
+.price-card.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.price-card.reveal.is-visible:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 56px rgba(8, 44, 38, 0.14);
+  border-color: rgba(18, 103, 86, 0.22);
 }
 
 .price-card.highlighted {
   background: var(--green-950);
   color: white;
-  transform: translateY(-12px);
   box-shadow: 0 26px 70px rgba(8, 44, 38, 0.26);
+}
+
+.price-card.highlighted.reveal {
+  transform: translateY(52px) scale(0.97);
+}
+
+.price-card.highlighted.reveal.is-visible {
+  transform: translateY(-12px) scale(1);
+}
+
+.price-card.highlighted.reveal.is-visible:hover {
+  transform: translateY(-18px) scale(1.03);
+  box-shadow: 0 32px 80px rgba(8, 44, 38, 0.32);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .price-card.highlighted h3,
@@ -954,8 +1054,12 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 
-  .price-card.highlighted {
-    transform: none;
+  .price-card.highlighted.reveal.is-visible {
+    transform: translateY(0) scale(1);
+  }
+
+  .price-card.highlighted.reveal.is-visible:hover {
+    transform: translateY(-6px) scale(1.03);
   }
 }
 

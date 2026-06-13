@@ -74,3 +74,47 @@ if (testimonialSlides.length > 0) {
 
   startAutoplay();
 }
+
+const priceCards = document.querySelectorAll(".pricing-grid .price-card");
+const STAGGER_MS = 120;
+let priceCardsRevealed = false;
+
+function revealAllPriceCards() {
+  if (priceCardsRevealed) {
+    return;
+  }
+
+  priceCardsRevealed = true;
+
+  priceCards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("is-visible");
+    }, index * STAGGER_MS);
+  });
+}
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top < window.innerHeight * 0.88 && rect.bottom > 0;
+}
+
+if (priceCards.length > 0) {
+  priceCards.forEach((card) => card.classList.add("reveal"));
+
+  const cardObserver = new IntersectionObserver(
+    (entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        revealAllPriceCards();
+      }
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  priceCards.forEach((card) => cardObserver.observe(card));
+
+  requestAnimationFrame(() => {
+    if ([...priceCards].some(isInViewport)) {
+      revealAllPriceCards();
+    }
+  });
+}
